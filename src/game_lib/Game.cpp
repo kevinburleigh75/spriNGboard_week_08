@@ -135,8 +135,12 @@ bool Game::handleCorrectAnswer ()
   }
   else
   {
-    // preserve existing bug behavior
-    string correct = inPenaltyBox[currentPlayer] ? "correct" : "corrent";
+    // fix corrent bug 
+    string correct = "correct";
+
+    // if inPenaltyBox[currentPlayer]{
+    // string correct = "correct";
+    // string correct = inPenaltyBox[currentPlayer] ? "correct" : "corrent";
     cout << "Answer was " << correct << "!!!!" << endl;
 
     purses[currentPlayer]++;
