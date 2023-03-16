@@ -1,1 +1,7 @@
-These are my observations for exercise_1
+These are my observations for Exercise 1:
+-> I found that some of the if-statement logic in handleCorrectAnswer() (L:129) was kinda unnecessary. I understood the original intent of the func to be:
+If currentPlayer is inPenaltyBox && is NOT getting out (bc they rolled the wrong number or answered incorrectly), player_has_not_won = true. 
+Else (using ternary operator '?:') if currentPlayer is inPenaltyBox, string correct = "correct" (else ':') string correct = "corrent". 
+Which I understood to mean there's an arbitrarily different word being used for players answering correctly inPentaltyBox vs players answering correctly outside of it. The func should just output 'correct' if the answer is correct. 
+
+-> I used "sed -i 's/corrent/correct/g' seed*" to find and replace 'corrent' with 'correct' in the golden data seed files
